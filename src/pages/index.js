@@ -10,6 +10,8 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import withRoot from '../withRoot';
 
+import Layout from '../components/layout';
+
 const styles = theme => ({
   root: {
     textAlign: 'center',
@@ -39,6 +41,7 @@ class Index extends React.Component {
     const { open } = this.state;
 
     return (
+      <Layout>
       <div className={classes.root}>
         <Dialog open={open} onClose={this.handleClose}>
           <DialogTitle>Super Secret Password</DialogTitle>
@@ -61,6 +64,7 @@ class Index extends React.Component {
           Super Secret Password
         </Button>
       </div>
+      </Layout>
     );
   }
 }
