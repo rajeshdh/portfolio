@@ -1,76 +1,40 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogActions from '@material-ui/core/DialogActions';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import withRoot from '../withRoot';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import withRoot from '../withRoot'
 
-import Layout from '../components/layout';
+import Layout from '../components/layout'
+import About from '../components/about'
+import Skills from '../components/skills'
+import AwesomeTimeline from '../components/workExperience'
 
 const styles = theme => ({
   root: {
     textAlign: 'center',
     paddingTop: theme.spacing.unit * 20,
+    paddingLeft: theme.spacing.unit * 40,
+    paddingRight: theme.spacing.unit * 40
   },
-});
+})
 
 class Index extends React.Component {
-  state = {
-    open: false,
-  };
-
-  handleClose = () => {
-    this.setState({
-      open: false,
-    });
-  };
-
-  handleClick = () => {
-    this.setState({
-      open: true,
-    });
-  };
-
+ 
   render() {
-    const { classes } = this.props;
-    const { open } = this.state;
-
+    const { classes } = this.props
     return (
       <Layout>
-      <div className={classes.root}>
-        <Dialog open={open} onClose={this.handleClose}>
-          <DialogTitle>Super Secret Password</DialogTitle>
-          <DialogContent>
-            <DialogContentText>1-2-3-4-5</DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button color="primary" onClick={this.handleClose}>
-              OK
-            </Button>
-          </DialogActions>
-        </Dialog>
-        <Typography variant="display1" gutterBottom>
-          Material-UI
-        </Typography>
-        <Typography variant="subheading" gutterBottom>
-          example project
-        </Typography>
-        <Button variant="contained" color="secondary" onClick={this.handleClick}>
-          Super Secret Password
-        </Button>
-      </div>
+        <div className={classes.root}>
+          <About />
+          <Skills />
+          <AwesomeTimeline />
+        </div>
       </Layout>
-    );
+    )
   }
 }
 
 Index.propTypes = {
   classes: PropTypes.object.isRequired,
-};
+}
 
-export default withRoot(withStyles(styles)(Index));
+export default withRoot(withStyles(styles)(Index))
