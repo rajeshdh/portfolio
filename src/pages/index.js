@@ -6,7 +6,7 @@ import withRoot from '../withRoot'
 import Layout from '../components/layout'
 import About from '../components/about'
 import Skills from '../components/skills'
-import AwesomeTimeline from '../components/workExperience'
+import WorkExperience from '../components/workExperience'
 
 const styles = theme => ({
   root: {
@@ -26,7 +26,7 @@ class Index extends React.Component {
         <div className={classes.root}>
           <About />
           <Skills />
-          <AwesomeTimeline />
+          <WorkExperience />
         </div>
       </Layout>
     )

@@ -1,25 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
-import LinearProgress from '@material-ui/core/LinearProgress'
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
+import {
+  Grid,
+  Paper,
+  Typography,
+  Divider,
+  LinearProgress,
+  withStyles,
+} from '@material-ui/core'
 
-const styles = {
+const styles = theme => ({
   root: {
     flexGrow: 1,
+    paddingTop: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2,
   },
-}
+})
 
 class Skills extends React.Component {
   render() {
     const { classes } = this.props
     return (
       <div className={classes.root}>
-       <Typography variant="display2">
-      Professional Skills
-      </Typography>
+        <Typography variant="display2">Professional Skills</Typography>
+        <Divider />
         <Grid container spacing={12}>
           <Grid item xs={6}>
             <Paper>

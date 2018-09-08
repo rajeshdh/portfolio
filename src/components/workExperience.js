@@ -1,5 +1,15 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import { Timeline } from 'react-material-timeline'
-import { Avatar, Icon } from '@material-ui/core'
+import { Avatar, Icon, Typography, Divider } from '@material-ui/core'
+import { withStyles } from '@material-ui/core/styles'
+
+const styles = theme => ({
+  root: {
+    paddingTop: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2,
+  },
+})
 
 const events = [
   {
@@ -24,9 +34,21 @@ const events = [
   },
 ]
 
-class AwesomeTimeline extends Component {
+class WorkExperience extends React.Component {
   render() {
-    return <Timeline events={events} />
+    const { classes } = this.props
+    return (
+      <div className={classes.root}>
+        <Typography variant="display2">Work Experience</Typography>
+        <Divider/>
+        <Timeline events={events} />
+      </div>
+    )
   }
 }
-export default AwesomeTimeline
+
+WorkExperience.propTypes = {
+  classes: PropTypes.object.isRequired,
+}
+
+export default withStyles(styles)(WorkExperience)
