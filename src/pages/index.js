@@ -8,6 +8,9 @@ import About from '../components/about'
 import Skills from '../components/skills'
 import WorkExperience from '../components/workExperience'
 
+import workEvents from '../data/workEvents'
+import educationEvents from '../data/educationEvents'
+
 const styles = theme => ({
   root: {
     textAlign: 'center',
@@ -26,7 +29,8 @@ class Index extends React.Component {
         <div className={classes.root}>
           <About />
           <Skills />
-          <WorkExperience />
+          <WorkExperience title="Work Experience" events={workEvents} />
+          <WorkExperience title="Education" events={educationEvents} />
         </div>
       </Layout>
     )
