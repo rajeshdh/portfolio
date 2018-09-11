@@ -13,7 +13,6 @@ const styles = theme => ({
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: 200,
   },
   rightIcon: {
     marginLeft: theme.spacing.unit,
@@ -44,6 +43,7 @@ const Contact = props => {
           helperText="Your name"
           margin="normal"
           required
+          fullWidth
         />
         <TextField
           label="Email"
@@ -54,6 +54,7 @@ const Contact = props => {
           helperText="Your Email"
           margin="normal"
           required
+          fullWidth
         />
         <TextField
           label="Message"
@@ -63,6 +64,7 @@ const Contact = props => {
           helperText="Write your message here..."
           margin="normal"
           required
+          fullWidth
         />
         <Button type="submit" variant="contained" color="primary" className={classes.button}>
           Send
