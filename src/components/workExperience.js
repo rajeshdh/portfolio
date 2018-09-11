@@ -6,9 +6,20 @@ import { withStyles } from '@material-ui/core/styles'
 
 const styles = theme => ({
   root: {
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
+    ...theme.mixins.gutters(),
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    paddingTop: theme.spacing.unit * 10,
+    paddingBottom: theme.spacing.unit * 10,
+    paddingLeft: theme.spacing.unit * 10,
+    paddingRight: theme.spacing.unit * 10,
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.paper,
   },
+  sectionHeader: {
+    marginBottom : '30px'
+  }
 })
 
 
@@ -17,7 +28,7 @@ class WorkExperience extends React.Component {
     const { classes, title, events } = this.props
     return (
       <div className={classes.root}>
-        <Typography variant="display2">{title}</Typography>
+        <Typography variant="display2" className={classes.sectionHeader}>{title}</Typography>
         <Divider/>
         <Timeline events={events} />
       </div>
