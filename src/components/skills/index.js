@@ -6,18 +6,17 @@ import Skill from './skill'
 
 const styles = theme => ({
   root: {
+    ...theme.mixins.gutters(),
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
     paddingTop: theme.spacing.unit * 10,
     paddingBottom: theme.spacing.unit * 10,
+    paddingLeft: theme.spacing.unit * 10,
+    paddingRight: theme.spacing.unit * 10,
     overflow: 'hidden',
     backgroundColor: theme.palette.background.paper,
     flexGrow: 1,
-  },
-  skillItem: {
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
   },
 })
 

@@ -6,6 +6,7 @@ import { withStyles } from '@material-ui/core/styles'
 const styles = theme => ({
   root: {
     ...theme.mixins.gutters(),
+    backgroundColor: theme.palette.background.paper,
     marginTop: '30px',
   },
   sectionText: {
