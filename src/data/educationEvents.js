@@ -1,5 +1,6 @@
 import React from 'react'
-import { Avatar, Icon } from '@material-ui/core'
+import { Avatar } from '@material-ui/core'
+import { SchoolRounded } from '@material-ui/icons'
 
 const educationEvents = [
   {
@@ -8,7 +9,7 @@ const educationEvents = [
     description: ['Some description for event 1'],
     icon: (
       <Avatar>
-        <Icon>work</Icon>
+        <SchoolRounded>School</SchoolRounded>
       </Avatar>
     ),
   },
@@ -18,7 +19,7 @@ const educationEvents = [
     description: ['Some description for event 2'],
     icon: (
       <Avatar>
-        <Icon>home</Icon>
+        <SchoolRounded>School</SchoolRounded>
       </Avatar>
     ),
   },

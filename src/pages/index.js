@@ -8,6 +8,7 @@ import About from '../components/about'
 import Skills from '../components/skills'
 import WorkExperience from '../components/workExperience'
 import ProjectList from '../components/projectList'
+import Contact from '../components/contact'
 
 import workEvents from '../data/workEvents'
 import educationEvents from '../data/educationEvents'
@@ -33,6 +34,7 @@ class Index extends React.Component {
           <ProjectList />
           <WorkExperience title="Work Experience" events={workEvents} />
           <WorkExperience title="Education" events={educationEvents} />
+          <Contact />
         </div>
       </Layout>
     )
