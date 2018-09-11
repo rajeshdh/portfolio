@@ -8,11 +8,9 @@ import SvgIcon from '@material-ui/core/SvgIcon'
 const styles = theme => ({
   root: {
     ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'flex-end'
+    justifyContent: 'flex-end',
+    backgroundColor: '#07cb79',
   },
   icon: {
     margin: theme.spacing.unit * 2,
@@ -77,25 +75,43 @@ const LinkedInIcon = props => {
 }
 
 const Social = ({ classes }) => (
-    <div>
-    <Paper className={classes.root} elevation={1}>
-    <a href="https://facebook.com/paharihacker" target="_blank" rel="noopener noreferrer">
+  <Paper className={classes.root} elevation={2}>
+    <a
+      href="https://facebook.com/paharihacker"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <FacebookIcon className={classes.icon} />
     </a>
-    <a href="https://twitter.com/paharihacker" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://twitter.com/paharihacker"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <TwitterIcon className={classes.icon} color="primary" />
     </a>
-    <a href="https://in.linkedin.com/rajeshsunnyd" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://in.linkedin.com/rajeshsunnyd"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <LinkedInIcon className={classes.icon} color="secondary" />
     </a>
-    <a href="https://github.com/rajeshdh" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://github.com/rajeshdh"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <GithubIcon className={classes.icon} color="secondary" />
     </a>
-    <a href="https://instagram.com/paharihacker" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://instagram.com/paharihacker"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <InstagramIcon className={classes.icon} color="error" />
     </a>
-    </Paper>
-  </div>
+  </Paper>
 )
 
 Social.propTypes = {

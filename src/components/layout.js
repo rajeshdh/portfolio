@@ -21,16 +21,21 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            {
+              name: 'description',
+              content: 'Rajesh Dhiman - Fullstack Developer',
+            },
+            {
+              name: 'keywords',
+              content:
+                'Rajesh Dhiman, nodejs developer, fullstack develoepr, portfolio, reactjs, material-ui',
+            },
           ]}
         >
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
-          {children}
-        </div>
+        <div>{children}</div>
       </>
     )}
   />

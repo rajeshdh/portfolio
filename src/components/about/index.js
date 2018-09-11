@@ -13,6 +13,7 @@ import {
 
 import Social from './social'
 import Summary from './summary'
+import './about.css'
 
 const styles = theme => ({
   root: {
@@ -22,10 +23,10 @@ const styles = theme => ({
   },
 })
 
-const About = ({ classes }) => (
+const About = ({ classes, userInfo }) => (
   <div>
-    <Paper className={classes.root} elevation={1}>
-      <Grid container spacing={12}>
+    <Paper className={classes.root} elevation={2}>
+      <Grid container spacing={24}>
         <Grid item xs={5}>
           <img
             alt=""
@@ -36,51 +37,50 @@ const About = ({ classes }) => (
         </Grid>
         <Grid item xs={7}>
           <div className="profile-info">
-            <div className="profile-items clearfix">
-              <div className="profile-preword">
-                <span>Hello</span>
-              </div>
+            <div className="speech-bubble">
+              <div className="arrow bottom right" />
+              <span>Hello</span>
             </div>
+
             <Typography
               style={{ display: 'inline-block' }}
-              variant="title"
+              variant="display1"
               gutterBottom
             >
-              I'm
+              I'm &nbsp;
             </Typography>
-            &nbsp;
+
             <Typography
               style={{ display: 'inline-block' }}
-              variant="headline"
+              variant="display1"
               gutterBottom
             >
-              Rajesh Dhiman
+              {userInfo.name}
             </Typography>
-            <Divider />
-            <Typography variant="display1" gutterBottom>
-              Developer and Startup entrepreneur
+            <Typography variant="title" gutterBottom>
+              {userInfo.jobTitle}
             </Typography>
           </div>
           <Divider />
           <List component="nav">
             <ListItem button>
               <ListItemText primary="Age" />
-              <ListItemText primary="29" />
+              <ListItemText primary={userInfo.age} />
             </ListItem>
             <Divider />
             <ListItem button>
               <ListItemText primary="Address" />
-              <ListItemText primary="24058, Belgium, Brussels, Liutte 27, BE" />
+              <ListItemText primary={userInfo.address} />
             </ListItem>
             <Divider />
             <ListItem button>
               <ListItemText primary="Phone" />
-              <ListItemText primary="+1 256 254 84 56" />
+              <ListItemText primary={userInfo.phone} />
             </ListItem>
             <Divider />
             <ListItem button>
               <ListItemText primary="Freelance" />
-              <ListItemText primary="till March 25, 2018" />
+              <ListItemText primary={userInfo.freelance} />
             </ListItem>
             <Divider />
           </List>
@@ -88,12 +88,13 @@ const About = ({ classes }) => (
       </Grid>
     </Paper>
     <Social />
-    <Summary />
+    <Summary summary={userInfo.summary} />
   </div>
 )
 
 About.propTypes = {
   classes: PropTypes.object.isRequired,
+  userInfo: PropTypes.object.isRequired,
 }
 
 export default withStyles(styles)(About)
