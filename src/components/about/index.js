@@ -30,8 +30,7 @@ const About = ({ classes, userInfo }) => (
         <Grid item xs={5}>
           <img
             alt=""
-            src="https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2015/11/startuper-1-299x347.jpg"
-            srcSet="https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2015/11/startuper-1-598x644.jpg 2x"
+            src="https://s.gravatar.com/avatar/82d06160e12c4b11f8ccfd363a168963?s=350"
             className="photo"
           />
         </Grid>

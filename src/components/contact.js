@@ -3,12 +3,21 @@ import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
+import { Typography } from '@material-ui/core'
 import { Send } from '@material-ui/icons'
 
 const styles = theme => ({
-  container: {
+  root: {
+    ...theme.mixins.gutters(),
     display: 'flex',
     flexWrap: 'wrap',
+    justifyContent: 'center',
+    paddingTop: theme.spacing.unit * 10,
+    paddingBottom: theme.spacing.unit * 10,
+    paddingLeft: theme.spacing.unit * 10,
+    paddingRight: theme.spacing.unit * 10,
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.paper,
   },
   textField: {
     marginLeft: theme.spacing.unit,
@@ -20,13 +29,17 @@ const styles = theme => ({
   button: {
     margin: theme.spacing.unit,
   },
+  sectionHeader: {
+    marginBottom: '30px',
+  },
 })
 
 const Contact = props => {
   const { classes } = props
 
   return (
-    <div className={classes.container}>
+    <div className={classes.root}>
+      <Typography variant="display2" className={classes.sectionHeader}>Feel free to contact me</Typography>
       <form
         name="contact"
         method="post"
@@ -66,7 +79,12 @@ const Contact = props => {
           required
           fullWidth
         />
-        <Button type="submit" variant="contained" color="primary" className={classes.button}>
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+          className={classes.button}
+        >
           Send
           <Send className={classes.rightIcon}>send</Send>
         </Button>

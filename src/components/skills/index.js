@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Grid, Typography, Divider, withStyles } from '@material-ui/core'
+import { Grid, Typography, withStyles } from '@material-ui/core'
 
 import Skill from './skill'
 
@@ -18,24 +18,28 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper,
     flexGrow: 1,
   },
+  sectionHeader: {
+    marginBottom: '30px',
+  },
 })
 
 class Skills extends React.Component {
   render() {
     const { classes } = this.props
     return (
-      <Grid container className={classes.root} spacing={16}>
-        <Typography variant="display2">Professional Skills</Typography>
-        <Divider />
-        <Grid container spacing={8}>
-          <Skill title={'Node.js'} value="90" />
-          <Skill title={'MongoDB'} value="85" />
-          <Skill title={'ReactJs'} value="70" />
-          <Skill title={'AngularJs'} value="85" />
-          <Skill title={'.NET'} value="75" />
-          <Skill title={'SQL Server'} value="80" />
+      <div className={classes.root}>
+        <Typography variant="display2" className={classes.sectionHeader}>Professional Skills</Typography>
+        <Grid container spacing={16}>
+          <Grid container spacing={8}>
+            <Skill title={'Node.js'} value="90" />
+            <Skill title={'MongoDB'} value="85" />
+            <Skill title={'ReactJs'} value="70" />
+            <Skill title={'AngularJs'} value="85" />
+            <Skill title={'.NET'} value="75" />
+            <Skill title={'SQL Server'} value="80" />
+          </Grid>
         </Grid>
-      </Grid>
+      </div>
     )
   }
 }

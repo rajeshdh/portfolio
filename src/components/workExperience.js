@@ -18,18 +18,19 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper,
   },
   sectionHeader: {
-    marginBottom : '30px'
-  }
+    marginBottom: '30px',
+  },
 })
-
 
 class WorkExperience extends React.Component {
   render() {
     const { classes, title, events } = this.props
     return (
       <div className={classes.root}>
-        <Typography variant="display2" className={classes.sectionHeader}>{title}</Typography>
-        <Divider/>
+        <Typography variant="display2" className={classes.sectionHeader}>
+          {title}
+        </Typography>
+        <Divider />
         <Timeline events={events} />
       </div>
     )
@@ -39,7 +40,7 @@ class WorkExperience extends React.Component {
 WorkExperience.propTypes = {
   classes: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
-  events: PropTypes.array.isRequired
+  events: PropTypes.array.isRequired,
 }
 
 export default withStyles(styles)(WorkExperience)

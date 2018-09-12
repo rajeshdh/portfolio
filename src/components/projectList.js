@@ -21,6 +21,9 @@ const styles = theme => ({
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
   },
+  sectionHeader: {
+    marginBottom: '30px',
+  },
 })
 
 const tileData = [
@@ -84,8 +87,9 @@ function ProjectList(props) {
   const { classes } = props
 
   return (
-    <Grid container className={classes.root} spacing={16}>
-    <Typography variant="display2">Projects</Typography>
+    <div className={classes.root}>
+     <Typography variant="display2" className={classes.sectionHeader}>Projects</Typography>
+    <Grid container spacing={16}>
       <Grid item xs={12}>
         <Grid container justify="center" spacing={8}>
           {tileData.map(tile => (
@@ -96,6 +100,7 @@ function ProjectList(props) {
         </Grid>
       </Grid>
     </Grid>
+    </div>
   )
 }
 
