@@ -31,6 +31,7 @@ const styles = theme => ({
   },
   sectionHeader: {
     marginBottom: '30px',
+    color: '#ff4081',
   },
 })
 

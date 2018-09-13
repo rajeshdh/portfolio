@@ -24,10 +24,11 @@ const styles = theme => ({
     paddingLeft: theme.spacing.unit * 10,
     paddingRight: theme.spacing.unit * 10,
     overflow: 'hidden',
-    backgroundColor: '#e3e3e3',
+    // backgroundColor: '#e3e3e3',
   },
   sectionHeader: {
     marginBottom: '30px',
+    color: '#ff4081',
   },
 })
 

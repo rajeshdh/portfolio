@@ -15,11 +15,12 @@ const styles = theme => ({
     paddingLeft: theme.spacing.unit * 10,
     paddingRight: theme.spacing.unit * 10,
     overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper,
+    // backgroundColor: '#e3e3e3',
     flexGrow: 1,
   },
   sectionHeader: {
     marginBottom: '30px',
+    color: '#ff4081',
   },
 })
 
