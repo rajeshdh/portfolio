@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 
 import Project from './project'
+import projectData from './data'
 
 const styles = theme => ({
   root: {
@@ -27,80 +28,29 @@ const styles = theme => ({
   },
 })
 
-const tileData = [
-  {
-    img: 'image',
-    title: 'Image',
-    author: 'author',
-    summary: ` Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-    across all continents except Antarctica`,
-    description: ` Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-    across all continents except Antarctica`,
-  },
-  {
-    img: 'image2',
-    title: 'Image2',
-    author: 'author2',
-    summary: ` Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-    across all continents except Antarctica`,
-    description: ` Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-    across all continents except Antarctica`,
-  },
-  {
-    img: 'image3',
-    title: 'Image3',
-    author: 'author3',
-    summary: ` Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-    across all continents except Antarctica`,
-    description: ` Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-    across all continents except Antarctica`,
-  },
-  {
-    img: 'image4',
-    title: 'Image3',
-    author: 'author3',
-    summary: ` Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-    across all continents except Antarctica`,
-    description: ` Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-    across all continents except Antarctica`,
-  },
-  {
-    img: 'image5',
-    title: 'Image3',
-    author: 'author3',
-    summary: ` Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-    across all continents except Antarctica`,
-    description: ` Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-    across all continents except Antarctica`,
-  },
-  {
-    img: 'image6',
-    title: 'Image3',
-    author: 'author3',
-    summary: ` Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-    across all continents except Antarctica`,
-    description: ` Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-    across all continents except Antarctica`,
-  },
-]
-
 function Projects(props) {
   const { classes } = props
 
   return (
     <div className={classes.root}>
-     <Typography variant="display2" className={classes.sectionHeader}>Projects</Typography>
-    <Grid container spacing={16}>
-      <Grid item xs={12}>
-        <Grid container justify="center" spacing={8}>
-          {tileData.map(tile => (
-            <Grid key={tile.img} item>
-              <Project title={tile.title} description={tile.description} summary={tile.summary} />
-            </Grid>
-          ))}
+      <Typography variant="display2" className={classes.sectionHeader}>
+        Projects
+      </Typography>
+      <Grid container spacing={16}>
+        <Grid item xs={12}>
+          <Grid container justify="center" spacing={8}>
+            {projectData.map((data,i) => (
+              <Grid key={i} item>
+                <Project
+                  title={data.title}
+                  description={data.description}
+                  summary={data.summary}
+                />
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
     </div>
   )
 }
