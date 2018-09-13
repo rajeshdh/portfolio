@@ -3,16 +3,11 @@ module.exports = {
     title: 'Rajesh Dhiman - Fullstack Developer',
     about: {
       name: 'Rajesh Dhiman',
-      jobTitle: 'Developer and Startup entrepreneur',
-      address: '24058, Belgium, Brussels, Liutte 27, BE',
+      jobTitle: 'Full Stack Developer and Startup entrepreneur',
+      address: 'Mandi, Himachal Pradesh, India',
       age: '30',
-      phone: '+91 23829 20237',
-      freelance: 'till march 2019',
-      summary: `Hello! I’m Robert Smith. Senior Web Developer specializing in front
-      end development. Experienced with all stages of the development cycle
-      for dynamic web projects. Well-versed in numerous programming
-      languages including JavaScript, SQL, and C. Stng background in project
-      management and customer relations.`
+      summary: `Hello! I’m Rajesh Dhiman. Experienced Fullstack Web Developer with a demonstrated history of working in the internet industry.
+      Skilled in javascript ( Node.js, React.js, Angular.js ), TDD, continuous integration and Application Programming Interfaces.`
     } 
   },
   plugins: [

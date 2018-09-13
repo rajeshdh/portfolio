@@ -58,8 +58,6 @@ export const query = graphql`
          jobTitle,
          address,
          age,
-         phone,
-         freelance,
          summary
        }
       }

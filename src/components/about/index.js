@@ -72,7 +72,7 @@ const About = ({ classes, userInfo }) => (
               <ListItemText primary={userInfo.address} />
             </ListItem>
             <Divider />
-            <ListItem button>
+            {/* <ListItem button>
               <ListItemText primary="Phone" />
               <ListItemText primary={userInfo.phone} />
             </ListItem>
@@ -80,7 +80,7 @@ const About = ({ classes, userInfo }) => (
             <ListItem button>
               <ListItemText primary="Freelance" />
               <ListItemText primary={userInfo.freelance} />
-            </ListItem>
+            </ListItem> */}
             <Divider />
           </List>
         </Grid>
