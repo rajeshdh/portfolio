@@ -54,7 +54,7 @@ const Contact = props => {
           id="name"
           name="name"
           className={classes.textField}
-          helperText="Your name"
+          helperText="Write your name here"
           margin="normal"
           required
           fullWidth
@@ -65,7 +65,7 @@ const Contact = props => {
           type="email"
           name="email"
           className={classes.textField}
-          helperText="Your Email"
+          helperText="Let me know how to contact you back"
           margin="normal"
           required
           fullWidth
