@@ -7,12 +7,14 @@ import withRoot from '../withRoot'
 import Layout from '../components/layout'
 import About from '../components/about'
 import Skills from '../components/skills'
-import WorkExperience from '../components/workExperience'
+// import WorkExperience from '../components/workExperience'
 import ProjectList from '../components/projectList'
 import Contact from '../components/contact'
 
-import workEvents from '../data/workEvents'
-import educationEvents from '../data/educationEvents'
+import Timeline from '../components/timeline'
+
+// import workEvents from '../data/workEvents'
+// import educationEvents from '../data/educationEvents'
 
 const styles = theme => ({
   root: {
@@ -31,8 +33,9 @@ class Index extends React.Component {
           <About userInfo={data.site.siteMetadata.about} />
           <Skills />
           <ProjectList />
-          <WorkExperience title="Work Experience" events={workEvents} />
-          <WorkExperience title="Education" events={educationEvents} />
+          <Timeline />
+          {/* <WorkExperience title="Work Experience" events={workEvents} />
+          <WorkExperience title="Education" events={educationEvents} /> */}
           <Contact />
         </div>
       </Layout>
