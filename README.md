@@ -28,7 +28,7 @@ gatsby develop
 
 ### ToDo
 
-- [ ] Add Styles to Contact Success Page
+- [x] Add Styles to Contact Success Page
 - [ ] Add tags to projects
 - [ ] Add a downloadable resume
 - [ ] Make it Responsive
