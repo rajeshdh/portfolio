@@ -84,7 +84,7 @@ const tileData = [
   },
 ]
 
-function ProjectList(props) {
+function Projects(props) {
   const { classes } = props
 
   return (
@@ -105,8 +105,8 @@ function ProjectList(props) {
   )
 }
 
-ProjectList.propTypes = {
+Projects.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withStyles(styles)(ProjectList)
+export default withStyles(styles)(Projects)

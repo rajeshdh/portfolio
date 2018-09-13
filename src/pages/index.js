@@ -8,7 +8,7 @@ import Layout from '../components/layout'
 import About from '../components/about'
 import Skills from '../components/skills'
 // import WorkExperience from '../components/workExperience'
-import ProjectList from '../components/projectList'
+import Projects from '../components/projects'
 import Contact from '../components/contact'
 
 import Timeline from '../components/timeline'
@@ -32,7 +32,7 @@ class Index extends React.Component {
         <div className={classes.root}>
           <About userInfo={data.site.siteMetadata.about} />
           <Skills />
-          <ProjectList />
+          <Projects />
           <Timeline />
           {/* <WorkExperience title="Work Experience" events={workEvents} />
           <WorkExperience title="Education" events={educationEvents} /> */}
