@@ -45,6 +45,7 @@ function Projects(props) {
                   title={data.title}
                   description={data.description}
                   summary={data.summary}
+                  tagsArr={data.tagsArr}
                 />
               </Grid>
             ))}

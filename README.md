@@ -29,7 +29,7 @@ gatsby develop
 ### ToDo
 
 - [x] Add Styles to Contact Success Page
-- [ ] Add tags to projects
+- [x] Add tags to projects
 - [ ] Add a downloadable resume
 - [ ] Make it Responsive
 - [ ] Add google analytics

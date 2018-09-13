@@ -7,17 +7,19 @@ import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
-// import CardMedia from '@material-ui/core/CardMedia'
+
 
 import DescriptionDialog from './descriptionDialog'
-const styles = {
+import Tag from './tag'
+
+const styles = theme => ({
   card: {
     maxWidth: 345,
   },
   media: {
     height: 140,
   },
-}
+})
 
 class Project extends React.Component {
   state = {
@@ -37,10 +39,16 @@ class Project extends React.Component {
   }
   render() {
     const { open } = this.state
-    const { classes, title, description, summary } = this.props
+    const { classes, title, description, summary, tagsArr } = this.props
+    
     return (
       <React.Fragment>
-        <DescriptionDialog title={title} description={description} open={open} handleClose={this.handleClose} />
+        <DescriptionDialog
+          title={title}
+          description={description}
+          open={open}
+          handleClose={this.handleClose}
+        />
         <Card className={classes.card}>
           <CardActionArea>
             <CardContent>
@@ -48,6 +56,9 @@ class Project extends React.Component {
                 {title}
               </Typography>
               <Typography component="p">{summary}</Typography>
+              {tagsArr.map((tag, i) => (
+                <Tag key={i} tag={tag} />
+              ))}
             </CardContent>
           </CardActionArea>
           <CardActions>
