@@ -24,3 +24,16 @@ gatsby develop
 ## Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+
+
+### ToDo
+
+- [ ] Add Styles to Contact Success Page
+- [ ] Add tags to projects
+- [ ] Add a downloadable resume
+- [ ] Make it Responsive
+- [ ] Add google analytics
+- [ ] Add interests or hobbies section
+- [ ] Change theme color dynamically
+- [ ] Lazy load components
+- [ ] Multiple Language Support
