@@ -30,7 +30,7 @@ gatsby develop
 
 - [x] Add Styles to Contact Success Page
 - [x] Add tags to projects
-- [ ] Add a downloadable resume
+- [x] Add a downloadable resume
 - [ ] Make it Responsive
 - [ ] Add google analytics
 - [ ] Add interests or hobbies section
