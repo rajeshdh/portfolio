@@ -72,16 +72,6 @@ const About = ({ classes, userInfo }) => (
               <ListItemText primary={userInfo.address} />
             </ListItem>
             <Divider />
-            {/* <ListItem button>
-              <ListItemText primary="Phone" />
-              <ListItemText primary={userInfo.phone} />
-            </ListItem>
-            <Divider />
-            <ListItem button>
-              <ListItemText primary="Freelance" />
-              <ListItemText primary={userInfo.freelance} />
-            </ListItem> */}
-            <Divider />
           </List>
         </Grid>
       </Grid>

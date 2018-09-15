@@ -7,13 +7,10 @@ import withRoot from '../withRoot'
 import Layout from '../components/Layout'
 import About from '../components/About'
 import Skills from '../components/Skills'
-// import WorkExperience from '../components/workExperience'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 
 import Timeline from '../components/Timeline'
-// import workEvents from '../data/workEvents'
-// import educationEvents from '../data/educationEvents'
 
 const styles = theme => ({
   root: {
@@ -33,8 +30,6 @@ class Index extends React.Component {
           <Skills />
           <Projects />
           <Timeline />
-          {/* <WorkExperience title="Work Experience" events={workEvents} />
-          <WorkExperience title="Education" events={educationEvents} /> */}
           <Contact />
         </div>
       </Layout>
