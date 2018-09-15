@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles, Button } from '@material-ui/core'
 import Paper from '@material-ui/core/Paper'
 import red from '@material-ui/core/colors/red'
 import SvgIcon from '@material-ui/core/SvgIcon'
@@ -20,6 +20,10 @@ const styles = theme => ({
     '&:hover': {
       color: red[800],
     },
+  },
+  button: {
+    margin: theme.spacing.unit,
+
   },
 })
 
@@ -73,9 +77,21 @@ const LinkedInIcon = props => {
     </SvgIcon>
   )
 }
+const DownloadButton = props => (
+  <Button
+    variant="outlined"
+    href={props.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    {...props}
+  >
+    Download Resume
+  </Button>
+)
 
-const Social = ({ classes }) => (
+const Social = ({ classes, resumeUrl }) => (
   <Paper className={classes.root} elevation={2}>
+    <DownloadButton url={resumeUrl} className={classes.button} />
     <a
       href="https://facebook.com/paharihacker"
       target="_blank"

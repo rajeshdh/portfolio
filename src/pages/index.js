@@ -12,7 +12,6 @@ import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 
 import Timeline from '../components/Timeline'
-
 // import workEvents from '../data/workEvents'
 // import educationEvents from '../data/educationEvents'
 
@@ -58,7 +57,8 @@ export const query = graphql`
          jobTitle,
          address,
          age,
-         summary
+         summary,
+         resume
        }
       }
     }

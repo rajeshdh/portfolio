@@ -86,7 +86,7 @@ const About = ({ classes, userInfo }) => (
         </Grid>
       </Grid>
     </Paper>
-    <Social />
+    <Social resumeUrl={userInfo.resume} />
     <Summary summary={userInfo.summary} />
   </div>
 )
